@@ -1,62 +1,34 @@
-# PythonForWebApp
+# Student Management System
 
-A Django REST Framework (DRF) project for managing school data, including students, subjects, and grades. This project provides a robust API for CRUD operations and facilitates integration with other applications.
+A web-based student management system built with Django REST API backend and Flask frontend for managing student grades and academic performance.
+
+## Table of Contents
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [API Documentation](#api-documentation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Features
+- Student Management (CRUD operations)
+- Subject Management
+- Grade Recording System
+- Student Rankings
+- Subject-wise Grade Analysis
+- REST API Integration
+
+## Tech Stack
+### Backend
+- Django 5.1.5
+- Django REST Framework
+- SQLite3
+
+### Frontend
+- Flask
+- HTML/CSS
+- Python Requests Library
 
 ## Project Structure
-
-- **api**: Contains the core API logic, including models, views, serializers, and URLs.
-- **school_management**: Main Django application directory with settings and configurations.
-- **db.sqlite3**: SQLite database file.
-
-## Endpoints
-
-The project includes the following API endpoints:
-
-### Students
-- **`GET /students/`**  
-  Retrieves a list of all students.
-- **`POST /students/`**  
-  Creates a new student.
-- **`GET /students/{id}/`**  
-  Retrieves details of a specific student.
-- **`PUT /students/{id}/`**  
-  Updates the details of a specific student.
-- **`DELETE /students/{id}/`**  
-  Deletes a specific student.
-
-### Subjects
-- **`GET /subjects/`**  
-  Retrieves a list of all subjects.
-- **`POST /subjects/`**  
-  Creates a new subject.
-- **`GET /subjects/{id}/`**  
-  Retrieves details of a specific subject.
-- **`PUT /subjects/{id}/`**  
-  Updates the details of a specific subject.
-- **`DELETE /subjects/{id}/`**  
-  Deletes a specific subject.
-
-### Grades
-- **`GET /grades/`**  
-  Retrieves a list of all grades.
-- **`POST /grades/`**  
-  Creates a new grade.
-- **`GET /grades/{id}/`**  
-  Retrieves details of a specific grade.
-- **`PUT /grades/{id}/`**  
-  Updates the details of a specific grade.
-- **`DELETE /grades/{id}/`**  
-  Deletes a specific grade.
-
-## Installation
-
-### Prerequisites
-- Python 3.8 or higher
-- Django 4.x
-- Django REST Framework
-
-### Steps
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd PythonForWebApp
