@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Student Dashboard</h1>
+    
+    <!-- Overall Rankings -->
+    <h2>Student Rankings</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Student</th>
+                <th>Overall Average</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in rankings %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ student.name }}</td>
+                <td>{{ student.average|round(2) }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Subject-wise Grades -->
+    <h2>Subject-wise Averages</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Student</th>
+                {% for subject in subjects %}
+                <th>{{ subject.name }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in student_subjects %}
+            <tr>
+                <td>{{ student.name }}</td>
+                {% for grade in student.subject_grades %}
+                <td>{{ grade|round(2) if grade else 'N/A' }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
