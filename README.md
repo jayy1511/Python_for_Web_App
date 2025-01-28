@@ -32,3 +32,5 @@ A web-based student management system built with Django REST API backend and Fla
 - Python Requests Library
 
 ## Project Structure
+
+student-management-system/ ├── school_management/ # Django Backend │ ├── api/ │ │ ├── __init__.py │ │ ├── admin.py │ │ ├── apps.py │ │ ├── migrations/ │ │ │ └── 0001_initial.py │ │ ├── models.py │ │ ├── serializers.py │ │ ├── tests.py │ │ ├── urls.py │ │ └── views.py │ ├── db.sqlite3 │ ├── manage.py │ ├── school_management/ │ │ ├── __init__.py │ │ ├── asgi.py │ │ ├── settings.py │ │ ├── urls.py │ │ └── wsgi.py └── flask/ # Flask Frontend ├── app.py ├── static/ │ └── styles.css └── templates/ └── dashboard.html
