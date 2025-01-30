@@ -1,28 +1,85 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    background: linear-gradient(to right, #141E30, #243B55);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
 }
 
+/* Header Styles */
 h1, h2 {
-    color: #333;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
 }
 
+/* Table Styling */
 table {
+    width: 90%;
+    margin: 20px auto;
     border-collapse: collapse;
-    margin: 20px 0;
-    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-th, td {
-    padding: 8px;
-    text-align: left;
-    border: 1px solid #ddd;
+/* Sticky Headers */
+thead {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
 }
 
+/* Table Headers */
 th {
-    background-color: #f4f4f4;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
 
-tr:nth-child(even) {
-    background-color: #f9f9f9;
+/* Table Rows */
+td, th {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Alternating Row Colors */
+tbody tr:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Hover Effects */
+tbody tr:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Ranking Column Styling */
+td:first-child {
+    font-weight: bold;
+    color: #FFD700; /* Gold color for ranking */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 0.9em;
+    }
 }
