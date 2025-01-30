@@ -27,6 +27,7 @@ This project is a **Student Management System** built using **Django and Flask**
 📍 Accessible at: **[http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin)**  
 - You can **add, edit, delete, and group** students, subjects, and grades here.  
 - Any changes made in Django **automatically reflect** in the Flask frontend.
+- You can create a super user by running "python manage.py createsuperuser" or you can use mine if you want , I have already added few students, subject and grades for better explanation (if you use my credentials)
 
 #### **🔐 Login Credentials for Django Admin**
 - **Username:** `jay15`  
@@ -66,14 +67,7 @@ The Django REST API provides the following endpoints:
 - The **Django backend** was developed **from scratch** to provide a clean and functional REST API.  
 - The **Flask frontend** was **fixed and improved** to properly fetch and display student data.  
 - The **project ensures an easy-to-use interface** for managing students, subjects, and grades efficiently.  
-- **All modifications made in Django reflect in Flask in real-time.**
-
----
-
-## 📌 Future Improvements
-🔹 Add **user authentication** (Admin & Teachers).  
-🔹 Implement **data visualization** (Charts for performance tracking).  
-🔹 Improve **UI/UX** with a modern frontend framework (React, Vue).  
+- **All modifications made in Django reflect in Flask in real-time.** 
 
 ---
 
