@@ -1,85 +1,105 @@
-/* Reset and Global Styles */
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
+
+/* Reset & Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 body {
-    background: linear-gradient(to right, #141E30, #243B55);
-    color: #fff;
-    text-align: center;
+    background: #181818;
+    color: #EAE0D5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     padding: 20px;
 }
 
-/* Header Styles */
-h1, h2 {
-    font-weight: 700;
-    letter-spacing: 1px;
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    background: #222222;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+/* Section Titles */
+h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+    color: #C2A878; /* Soft Gold */
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #B35743; /* Muted Red */
     margin-bottom: 15px;
     text-transform: uppercase;
 }
 
-/* Table Styling */
-table {
-    width: 90%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+/* Table Wrapper for Responsive Design */
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 8px;
 }
 
-/* Sticky Headers */
-thead {
-    position: sticky;
-    top: 0;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #2A2A2A;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.25);
 }
 
 /* Table Headers */
+thead {
+    background: #333333;
+}
+
 th {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 12px;
-    font-size: 1.1em;
+    color: #E3D5C9;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 600;
     text-transform: uppercase;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 2px solid #3E3E3E;
 }
 
 /* Table Rows */
-td, th {
+td {
     padding: 12px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 1rem;
+    border-bottom: 1px solid #494949;
+    color: #EAE0D5;
 }
 
 /* Alternating Row Colors */
 tbody tr:nth-child(odd) {
-    background: rgba(255, 255, 255, 0.1);
+    background: #252525;
 }
 
 /* Hover Effects */
 tbody tr:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease-in-out;
 }
 
-/* Ranking Column Styling */
+/* Rank Column Styling */
 td:first-child {
     font-weight: bold;
-    color: #FFD700; /* Gold color for ranking */
+    color: #D4A373; /* Soft Bronze */
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    table {
-        width: 100%;
-    }
-
-    th, td {
-        padding: 8px;
-        font-size: 0.9em;
-    }
-}
+/*

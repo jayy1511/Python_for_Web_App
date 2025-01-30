@@ -5,52 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Dashboard</title>
     <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Student Dashboard</h1>
-    
-    <!-- Overall Rankings -->
-    <h2>Student Rankings</h2>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Rank</th>
-                <th>Student</th>
-                <th>Overall Average</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for student in rankings %}
-            <tr>
-                <td>{{ loop.index }}</td>
-                <td>{{ student.name }}</td>
-                <td>{{ student.average|round(2) }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <div class="container">
+        <h1>Student Dashboard</h1>
 
-    <!-- Subject-wise Grades -->
-    <h2>Subject-wise Averages</h2>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Student</th>
-                {% for subject in subjects %}
-                <th>{{ subject.name }}</th>
-                {% endfor %}
-            </tr>
-        </thead>
-        <tbody>
-            {% for student in student_subjects %}
-            <tr>
-                <td>{{ student.name }}</td>
-                {% for grade in student.subject_grades %}
-                <td>{{ grade|round(2) if grade else 'N/A' }}</td>
-                {% endfor %}
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+        <!-- Overall Rankings -->
+        <div class="section">
+            <h2>Student Rankings</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Student</th>
+                            <th>Overall Average</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for student in rankings %}
+                        <tr>
+                            <td>#{{ loop.index }}</td>
+                            <td>{{ student.name }}</td>
+                            <td>{{ student.average|round(2) }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Subject-wise Grades -->
+        <div class="section">
+            <h2>Subject-wise Averages</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student</th>
+                            {% for subject in subjects %}
+                            <th>{{ subject.name }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for student in student_subjects %}
+                        <tr>
+                            <td>{{ student.name }}</td>
+                            {% for grade in student.subject_grades %}
+                            <td>{{ grade|round(2) if grade else 'N/A' }}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
